@@ -1,0 +1,22 @@
+{
+  "name": "webssh",
+  "version": "1.0.0",
+  "description": "webssh implement demo",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webssh",
+    "demo"
+  ],
+  "author": "JamLee",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0",
+    "ssh2": "^0.8.9",
+    "utf8": "^3.0.0",
+    "xterm": "^4.9.0"
+  }
+}
