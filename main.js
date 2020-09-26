@@ -4,7 +4,6 @@ const io = require('socket.io')(http);
 const utf8 = require('utf8');
 const SSHClient = require('ssh2').Client;
 const pty = require('node-pty');
-const os = require('os');
 
 function createNewServer(machineConfig, socket) {
     const ssh = new SSHClient();
