@@ -39,3 +39,12 @@ VM 的 webssh
 
 k8s 中 pod 的 webssh
 ![image](http://github.com/Jamlee/webssh/raw/master/02.jpg)
+
+## 其他类似项目
+
+基于 Python
+https://github.com/xsank/webssh
+https://github.com/huashengdun/webssh
+
+基于 Golang
+https://github.com/shibingli/webconsole
