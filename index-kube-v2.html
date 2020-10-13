@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="node_modules/xterm/css/xterm.css" />
+    <script src="node_modules/xterm/lib/xterm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" integrity="sha512-v8ng/uGxkge3d1IJuEo6dJP8JViyvms0cly9pnbfRxT6/31c3dRWxIiwGnMSWwZjHKOuY3EVmijs7k1jz/9bLA==" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="terminal"></div>
+<script>
+    function utf8_to_b64( str ) {
+        return window.btoa(window.unescape(encodeURIComponent( str )));
+    }
+    function b64_to_utf8( str ) {
+        return decodeURIComponent(window.escape(window.atob( str )));
+    }
+
+    let config = {msgId: "pod01", podName: "mysql", namespace: "default"};
+    const socket = io('http://localhost:8000');
+    const term = new Terminal();
+    term.open(document.getElementById('terminal'));
+    term.onData(function(data) {
+        socket.emit(config.msgId, utf8_to_b64(data));
+    });
+    socket.on(config.msgId, function (data) {
+        console.log(b64_to_utf8(data));
+        term.write(b64_to_utf8(data));
+    });
+    socket.emit('createNewPodWithOutKubectl', config);
+</script>
+</body>
+</html>

@@ -18,6 +18,8 @@
     "socket.io": "^2.3.0",
     "ssh2": "^0.8.9",
     "utf8": "^3.0.0",
+    "@kubernetes/client-node": "^0.12.2",
+    "dev-null": "^0.1.1",
     "xterm": "^4.9.0"
   }
 }
