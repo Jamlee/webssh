@@ -53,6 +53,7 @@ k8s 中 pod 的 webssh（依赖 node k8s client）
 基于 Node
 
 https://github.com/samejack/web-k8s-exec
+
 https://github.com/kubernetes-ui/container-terminal
 
 基于 Python
