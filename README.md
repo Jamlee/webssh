@@ -1,12 +1,8 @@
 # WEBSSH
-
 124 行代码完成3种简易的 webssh, 支持 k8s 和 vm ssh，用于理解实现webssh原理。我们也可以基于该原理开发 Paas 平台功能。
 
-
 ## 使用方式
-
 针对于虚拟机的 webssh
-
 ```bash
 # 1 启动 node
 node main.js
@@ -20,7 +16,6 @@ let config = {msgId: "server01", ip: "200.200.200.180", username: "root", passwo
 ``` 
 
 针对于k8s 的 webssh
-
 ```bash
 # 1 启动 node
 node main.js
@@ -35,34 +30,25 @@ let config = {msgId: "pod01", podName: "tiller-deploy-6d8dfbb696-z8g6l", namespa
 类似的：https://github.com/Jamlee/webssh/blob/master/index-kube-v2.html#L18 也是一样修改和访问，我们这个方案不依赖 kubectl。
 
 ## 效果图
+VM 的 webssh  
+![image](http://github.com/Jamlee/webssh/raw/master/01.jpg)  
 
-VM 的 webssh
+k8s 中 pod 的 webssh (依赖 kubectl)  
+![image](http://github.com/Jamlee/webssh/raw/master/02.jpg)  
 
-![image](http://github.com/Jamlee/webssh/raw/master/01.jpg)
-
-k8s 中 pod 的 webssh (依赖 kubectl)
-
-![image](http://github.com/Jamlee/webssh/raw/master/02.jpg)
-
-k8s 中 pod 的 webssh（依赖 node k8s client）
-
-![image](http://github.com/Jamlee/webssh/raw/master/03.jpg)
+k8s 中 pod 的 webssh（依赖 node k8s client）  
+![image](http://github.com/Jamlee/webssh/raw/master/03.jpg)  
 
 ## 其他类似项目
 
-基于 Node
+基于 Node  
+https://github.com/samejack/web-k8s-exec  
+https://github.com/kubernetes-ui/container-terminal  
 
-https://github.com/samejack/web-k8s-exec
+基于 Python  
+https://github.com/xsank/webssh  
+https://github.com/huashengdun/webssh  
 
-https://github.com/kubernetes-ui/container-terminal
-
-基于 Python
-
-https://github.com/xsank/webssh
-
-https://github.com/huashengdun/webssh
-
-基于 Golang
-
-https://github.com/shibingli/webconsole
+基于 Golang  
+https://github.com/shibingli/webconsole  
 
