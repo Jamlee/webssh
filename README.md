@@ -1,6 +1,17 @@
 # WEBSSH
 
-133 行代码完成一个简易的 webssh, 支持 k8s 和 vm ssh，用于理解实现webssh原理。我们也可以基于该原理开发 Paas 平台功能。
+124 行代码完成3种简易的 webssh, 支持 k8s 和 vm ssh，用于理解实现webssh原理。我们也可以基于该原理开发 Paas 平台功能。
+
+-------------------------------------------------------------------------------
+ Language            Files        Lines         Code     Comments       Blanks
+-------------------------------------------------------------------------------
+ HTML                    3           83           82            0            1
+ JavaScript              1          136          124            2           10
+ JSON                    2         1850         1850            0            0
+ Markdown                1           65           65            0            0
+-------------------------------------------------------------------------------
+ Total                   7         2134         2121            2           11
+-------------------------------------------------------------------------------
 
 ## 使用方式
 
@@ -31,6 +42,7 @@ node main.js
 let config = {msgId: "pod01", podName: "tiller-deploy-6d8dfbb696-z8g6l", namespace: "kube-system"};
 # 然后本地浏览器打开 index-kube.html
 ``` 
+类似的：https://github.com/Jamlee/webssh/blob/master/index-kube-v2.html#L18 也是一样修改和访问，我们这个方案不依赖 kubectl。
 
 ## 效果图
 
@@ -44,7 +56,7 @@ k8s 中 pod 的 webssh (依赖 kubectl)
 
 k8s 中 pod 的 webssh（依赖 node k8s client）
 
-![image](http://github.com/Jamlee/webssh/raw/master/02.jpg)
+![image](http://github.com/Jamlee/webssh/raw/master/03.jpg)
 
 ## 其他类似项目
 
