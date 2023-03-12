@@ -7,12 +7,12 @@
 # 1 启动 node
 node main.js
 
-# 打开本地文件 index-vm.html
+# 2 打开本地文件 index-vm.html
 # 修改代码里配置信息
 # https://github.com/Jamlee/webssh/blob/033491e4f17fc40794e84e369550d9f20f290af0/index.html#L11
-
 let config = {msgId: "server01", ip: "200.200.200.180", username: "root", password: "YOUR PASSWORD"};
-# 然后本地浏览器打开 index-vm.html
+
+# 3 然后本地浏览器打开 index-vm.html
 ``` 
 
 针对于k8s 的 webssh
@@ -20,12 +20,12 @@ let config = {msgId: "server01", ip: "200.200.200.180", username: "root", passwo
 # 1 启动 node
 node main.js
 
-# 打开本地文件 index.html
+# 2 打开本地文件 index-kube.html
 # 修改代码里配置信息
 # https://github.com/Jamlee/webssh/blob/033491e4f17fc40794e84e369550d9f20f290af0/index.html#L11
-
 let config = {msgId: "pod01", podName: "tiller-deploy-6d8dfbb696-z8g6l", namespace: "kube-system"};
-# 然后本地浏览器打开 index-kube.html
+
+# 3 然后本地浏览器打开 index-kube.html
 ``` 
 类似的：https://github.com/Jamlee/webssh/blob/master/index-kube-v2.html#L18 也是一样修改和访问，我们这个方案不依赖 kubectl。
 
